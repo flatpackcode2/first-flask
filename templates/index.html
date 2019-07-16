@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>HELLO {{name}}!!!</h1>
-    <ul>
-        {% for hobby in hobbies %}
-            <li>{{hobby}}</li>
-        {% endfor %}
-    </ul>
-    {% if signed_in==True%}
-        <h1>Welcome back!</h1>
-        <button>Log Out</button>
-    {%else%}
-        <h1>Hello Stranger</h1>
-        <button>Log in</button>
-        <button>Sign-up</button>
-    {%endif%}
-    <img src={{url_for('static',filename='hello.jpg')}} />
-</body>
-</html>
+{% extends "main.html"%}
+{% block content %}
+<h1>Homepage Content Here</h1>
+{% endblock %}
